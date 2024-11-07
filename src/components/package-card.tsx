@@ -28,8 +28,9 @@ export function PackageCard({
           <div className="text-3xl font-bold">₹{price}</div>
           <div className="text-sm text-gray-500">{duration}</div>
           <Button 
-            onClick={onSelect}
+            type="button"
             className="w-full"
+            onClick={onSelect}
           >
             Select Package
           </Button>
