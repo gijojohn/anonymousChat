@@ -42,27 +42,29 @@ export function PackagesSection() {
         </p>
       </div>
       
-      <div style={{ display: 'flex', flexDirection: 'row', gap: '24px', justifyContent: 'center', maxWidth: '1200px', margin: '0 auto' }}>
-        {PACKAGES.map((pkg) => (
-          <div key={pkg.id} style={{ flex: '1', minWidth: '300px', maxWidth: '400px' }}>
-            <Card className="h-full bg-white border border-gray-200 hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold">{pkg.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <p className="text-gray-600">{pkg.description}</p>
-                <div className="text-3xl font-bold text-gray-900">₹{pkg.price}</div>
-                <div className="text-sm text-gray-500">{pkg.duration}</div>
-                <Button 
-                  onClick={() => handlePackageSelect(pkg.id)}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors"
-                >
-                  Select Package
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        ))}
+      <div className="max-w-[1200px] mx-auto">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          {PACKAGES.map((pkg) => (
+            <div key={pkg.id} className="w-full md:w-[calc(33.333%-16px)] min-w-[280px]">
+              <Card className="h-full bg-white border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="text-xl font-semibold">{pkg.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600">{pkg.description}</p>
+                  <div className="text-3xl font-bold text-gray-900">₹{pkg.price}</div>
+                  <div className="text-sm text-gray-500">{pkg.duration}</div>
+                  <Button 
+                    onClick={() => handlePackageSelect(pkg.id)}
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors"
+                  >
+                    Select Package
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
