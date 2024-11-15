@@ -1,0 +1,14 @@
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .packages-grid {
+      grid-template-columns: 1fr;
+    }
+  }

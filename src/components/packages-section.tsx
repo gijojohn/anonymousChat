@@ -1,5 +1,6 @@
 'use client';
 
+import './packages.css';
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,14 +8,14 @@ import { Button } from '@/components/ui/button';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation 789 ',
+    title: 'Basic Consultation 7890 ',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
   },
   {
     id: 2,
-    title: 'Standard Consultation 101112',
+    title: 'Standard Consultation 10111200',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
@@ -43,9 +44,9 @@ export function PackagesSection() {
       </div>
       
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid !grid-cols-3 gap-6 !important">
+        <div className="packages-grid">
           {PACKAGES.map((pkg) => (
-            <div key={pkg.id} className="!col-span-1 !important">
+            <div key={pkg.id}>
               <Card className="h-full bg-white border border-gray-200 hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold">{pkg.title}</CardTitle>
