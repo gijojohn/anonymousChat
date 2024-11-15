@@ -43,7 +43,7 @@ export function PackagesSection() {
       </div>
       
       <div className="max-w-[1200px] mx-auto">
-        <div className="flex flex-col md:flex-row gap-6 justify-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
           {PACKAGES.map((pkg) => (
             <div key={pkg.id} className="w-full md:w-[calc(33.333%-16px)] min-w-[280px]">
               <Card className="h-full bg-white border border-gray-200 hover:shadow-lg transition-all duration-300">
