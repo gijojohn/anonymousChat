@@ -15,14 +15,14 @@ const PACKAGES = [
   },
   {
     id: 2,
-    title: 'Standard Consultation .',
+    title: 'Standard Consultation ....',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
   },
   {
     id: 3,
-    title: 'Extended Consultation',
+    title: 'Extended Consultation ....',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
@@ -44,28 +44,28 @@ export function PackagesSection() {
       </div>
       
       <div className="max-w-[1200px] mx-auto">
-        <div className="packages-grid">
-          {PACKAGES.map((pkg) => (
-            <div key={pkg.id}>
-              <Card className="h-full bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 p-6">
-                <CardHeader className="p-0">
-                  <CardTitle className="text-2xl font-bold mb-4">{pkg.title}</CardTitle>
-		  <p className="text-gray-600 mb-6">{pkg.description}</p>
-                </CardHeader>
-                <CardContent className="p-0 space-y-4">
-                  <div className="text-4xl font-bold">₹{pkg.price}</div>
-    		  <div className="text-gray-500">{pkg.duration}</div>
-                  <Button 
-       		    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"
-                    onClick={() => handlePackageSelect(pkg.id)}
-                  >
-                    Select Package
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
+      <div className="packages-grid">
+  {PACKAGES.map((pkg) => (
+    <div key={pkg.id} className="card-content">
+      <Card className="h-full border-0 shadow-none">
+        <CardHeader className="p-0">
+          <CardTitle className="text-2xl font-bold mb-4">{pkg.title}</CardTitle>
+          <p className="text-gray-600 mb-6">{pkg.description}</p>
+        </CardHeader>
+        <CardContent className="p-0 space-y-4">
+          <div className="text-4xl font-bold">₹{pkg.price}</div>
+          <div className="text-gray-500">{pkg.duration}</div>
+          <Button 
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg"
+            onClick={() => handlePackageSelect(pkg.id)}
+          >
+            Select Package
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
