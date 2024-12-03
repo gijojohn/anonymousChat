@@ -16,14 +16,14 @@ const PACKAGES = [
   },
   {
     id: 2,
-    title: 'Standard Consultation .... !',
+    title: 'Standard Consultation .!',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
   },
   {
     id: 3,
-    title: 'Extended Consultation ....!',
+    title: 'Extended Consultation .1',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
@@ -53,7 +53,7 @@ export function PackagesSection() {
               <div className="custom-price">₹{pkg.price}</div>
               <div>{pkg.duration}</div>
               <Button 
-                className="custom-button bg-blue-600 hover:bg-blue-700 text-white"
+                className="custom-button !bg-[#4361ee] hover:!bg-[#3730a3] !text-white"
                 onClick={() => handlePackageSelect(pkg.id)}
               >
                 Select Package
