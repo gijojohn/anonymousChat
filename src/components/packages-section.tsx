@@ -9,21 +9,21 @@ import { Button } from '@/components/ui/button';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation ....!!',
+    title: 'Basic Consultation',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
   },
   {
     id: 2,
-    title: 'Standard Consultation .!',
+    title: 'Standard Consultation',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
   },
   {
     id: 3,
-    title: 'Extended Consultation .1',
+    title: 'Extended Consultation',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
