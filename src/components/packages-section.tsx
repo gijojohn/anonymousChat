@@ -9,21 +9,21 @@ import { Button } from '@/components/ui/button';
 const PACKAGES = [
   {
     id: 1,
-    title: 'Basic Consultation',
+    title: 'Basic Consultation 1',
     description: 'Perfect for quick questions and brief consultations',
     price: 499,
     duration: '30 Minutes',
   },
   {
     id: 2,
-    title: 'Standard Consultation',
+    title: 'Standard Consultation 2',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
   },
   {
     id: 3,
-    title: 'Extended Consultation',
+    title: 'Extended Consultation 3',
     description: 'Comprehensive consultation for complex matters',
     price: 1599,
     duration: '120 Minutes',
@@ -52,12 +52,12 @@ export function PackagesSection() {
               <p>{pkg.description}</p>
               <div className="custom-price">₹{pkg.price}</div>
               <div>{pkg.duration}</div>
-              <Button 
-                className="custom-button !bg-[#4361ee] hover:!bg-[#3730a3] !text-white"
+              <button 
+                className="custom-button"
                 onClick={() => handlePackageSelect(pkg.id)}
               >
                 Select Package
-              </Button>
+              </button>
             </div>
           ))}
         </div>

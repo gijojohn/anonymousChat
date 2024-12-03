@@ -1,40 +1,49 @@
 .custom-packages-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .custom-card {
-    background: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    height: 100%;
-  }
-  
-  .custom-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .custom-price {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 1.5rem 0;
-  }
-  
-  .custom-button {
-    width: 100%;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-  }
-  
-  @media (max-width: 768px) {
-    .custom-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.custom-card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  height: 100%;
+}
+
+.custom-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.custom-price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+.custom-button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #4361ee !important;
+  color: white !important;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #3730a3 !important;
+}
+
+@media (max-width: 768px) {
+  .custom-packages-grid {
       grid-template-columns: 1fr;
-    }
   }
+}
