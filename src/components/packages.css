@@ -1,74 +1,34 @@
 .packages-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1200px] mx-auto;
 }
 
 .package-card {
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-family: var(--font-geist-sans);
+  @apply bg-white rounded-xl shadow-md p-8 h-full flex flex-col items-center text-center;
 }
 
 .package-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-  font-family: var(--font-geist-sans);
+  @apply text-2xl font-bold mb-4;
 }
 
 .package-description {
-  color: #4B5563;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-family: var(--font-geist-sans);
+  @apply text-gray-600 mb-6;
 }
 
 .package-price {
-  font-size: 2rem;
-  font-weight: 700;
-  margin: 1.5rem 0;
-  text-align: center;
-  font-family: var(--font-geist-sans);
+  @apply text-4xl font-bold my-6;
 }
 
 .package-duration {
-  color: #4B5563;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-family: var(--font-geist-sans);
+  @apply text-gray-600 mb-6;
 }
 
 .package-button {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  background-color: #4361ee;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
-  font-weight: 500;
-  font-family: var(--font-geist-sans);
-}
-
-.package-button:hover {
-  background-color: #3730a3;
+  @apply w-full py-3 px-4 rounded-lg bg-[#4361ee] text-white font-medium 
+  transition-colors duration-300 hover:bg-[#3730a3] cursor-pointer;
 }
 
 @media (max-width: 768px) {
   .packages-grid {
-    grid-template-columns: 1fr;
+    @apply grid-cols-1;
   }
 }
