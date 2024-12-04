@@ -1,11 +1,16 @@
+// tailwind.config.ts
 import type { Config } from "tailwindcss"
 
 const config: Config = {
   important: true,
-  mode: 'jit',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
+      },
+    },
   },
   plugins: [],
 }
