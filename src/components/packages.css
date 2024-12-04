@@ -17,23 +17,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--font-geist-sans);
+  text-align: center;
 }
 
 .package-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-align: center;
   width: 100%;
-  font-family: var(--font-geist-sans);
+  text-align: center;
 }
 
 .package-description {
   color: #4B5563;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: var(--font-geist-sans);
+  width: 100%;
 }
 
 .package-price {
@@ -41,14 +40,14 @@
   font-weight: 700;
   margin: 1.5rem 0;
   text-align: center;
-  font-family: var(--font-geist-sans);
+  width: 100%;
 }
 
 .package-duration {
   color: #4B5563;
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: var(--font-geist-sans);
+  width: 100%;
 }
 
 .package-button {
@@ -60,7 +59,9 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  font-weight: 500;
+  margin-top: auto;
 }
 
 .package-button:hover {
@@ -70,13 +71,11 @@
 @media (max-width: 1024px) {
   .packages-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
   .packages-grid {
     grid-template-columns: 1fr;
-    padding: 0 1rem;
   }
 }
