@@ -1,11 +1,10 @@
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .package-card {
@@ -17,29 +16,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center; /* Added this */
+  text-align: center !important; /* Added !important */
 }
 
 .package-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center !important; /* Added !important */
+  width: 100%;
 }
 
 .package-description {
   color: #4B5563;
   margin-bottom: 1.5rem;
+  text-align: center !important; /* Added !important */
+  width: 100%;
 }
 
 .package-price {
   font-size: 2rem;
   font-weight: 700;
   margin: 1.5rem 0;
+  text-align: center !important; /* Added !important */
+  width: 100%;
 }
 
 .package-duration {
   color: #4B5563;
   margin-bottom: 1.5rem;
+  text-align: center !important; /* Added !important */
+  width: 100%;
 }
 
 .package-button {
@@ -51,27 +59,24 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: auto;
+  text-align: center !important; /* Added !important */
+  font-weight: 500;
 }
 
 .package-button:hover {
   background-color: #3730a3;
 }
 
-@media (min-width: 1024px) {
-  .packages-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Add a global text alignment for all headings inside section */
+section h1,
+section h2,
+section h3,
+section p {
+  text-align: center !important;
 }
 
-@media (max-width: 1023px) and (min-width: 640px) {
+@media (max-width: 1024px) {
   .packages-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 639px) {
-  .packages-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
