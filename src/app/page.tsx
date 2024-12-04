@@ -1,17 +1,16 @@
-// src/app/page.tsx
 'use client';
 
-import { PackagesSection } from "@/components/packages-section"
+import { PackagesSection } from "../components/packages-section";  // Update the path based on your file structure
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gray-50 font-sans">
+    <main className="min-h-screen bg-gray-50 text-center">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 text-center">
             Anonymous Chat Consultation
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 text-center">
             Professional consultation with complete privacy
           </p>
         </div>

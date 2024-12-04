@@ -13,6 +13,9 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -20,26 +23,30 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  width: 100%;
 }
 
 .package-description {
   color: #4B5563;
   margin-bottom: 1.5rem;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  width: 100%;
 }
 
 .package-price {
   font-size: 2rem;
   font-weight: 700;
   margin: 1.5rem 0;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  width: 100%;
 }
 
 .package-duration {
   color: #4B5563;
   margin-bottom: 1.5rem;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  width: 100%;
 }
 
 .package-button {
@@ -51,11 +58,17 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-family: var(--font-geist-sans);
+  text-align: center;
+  font-weight: 500;
 }
 
 .package-button:hover {
   background-color: #3730a3;
+}
+
+/* Force text alignment for all headings */
+h1, h2, h3, p {
+  text-align: center !important;
 }
 
 @media (max-width: 768px) {
