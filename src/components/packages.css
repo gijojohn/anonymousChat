@@ -1,17 +1,11 @@
-main h1,
-main p,
-main h2,
-main h3 {
-  text-align: center !important;
-}
-
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .package-card {
@@ -23,38 +17,38 @@ main h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Added this */
-  text-align: center !important; /* Added !important */
+  font-family: var(--font-geist-sans);
 }
 
 .package-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-align: center !important; /* Added !important */
+  text-align: center;
   width: 100%;
+  font-family: var(--font-geist-sans);
 }
 
 .package-description {
   color: #4B5563;
   margin-bottom: 1.5rem;
-  text-align: center !important; /* Added !important */
-  width: 100%;
+  text-align: center;
+  font-family: var(--font-geist-sans);
 }
 
 .package-price {
   font-size: 2rem;
   font-weight: 700;
   margin: 1.5rem 0;
-  text-align: center !important; /* Added !important */
-  width: 100%;
+  text-align: center;
+  font-family: var(--font-geist-sans);
 }
 
 .package-duration {
   color: #4B5563;
   margin-bottom: 1.5rem;
-  text-align: center !important; /* Added !important */
-  width: 100%;
+  text-align: center;
+  font-family: var(--font-geist-sans);
 }
 
 .package-button {
@@ -66,24 +60,23 @@ main h3 {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-align: center !important; /* Added !important */
-  font-weight: 500;
+  font-family: var(--font-geist-sans);
 }
 
 .package-button:hover {
   background-color: #3730a3;
 }
 
-/* Add a global text alignment for all headings inside section */
-section h1,
-section h2,
-section h3,
-section p {
-  text-align: center !important;
-}
-
 @media (max-width: 1024px) {
   .packages-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 }

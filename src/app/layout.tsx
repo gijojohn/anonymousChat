@@ -14,18 +14,6 @@ const geistSans = localFont({
   display: 'swap',
 });
 
-const geistMono = localFont({
-  src: [
-    {
-      path: './fonts/GeistMonoVF.woff',
-      weight: '100 900',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-geist-mono',
-  display: 'swap',
-});
-
 export const metadata: Metadata = {
   title: "Anonymous Chat Consultation",
   description: "Professional consultation with complete privacy",
@@ -37,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable}`}>
       <body className="font-sans antialiased">
         {children}
       </body>

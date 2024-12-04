@@ -1,14 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --background: #f8fafc;
-  --text-primary: #1a1a1a;
-  --card-background: white;
+  --font-geist-sans: 'GeistSans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text-primary);
+  font-family: var(--font-geist-sans);
+}
+
+h1, h2, h3, p {
+  text-align: center;
+  font-family: var(--font-geist-sans);
 }
