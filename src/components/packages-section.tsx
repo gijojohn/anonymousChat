@@ -13,7 +13,7 @@ const PACKAGES = [
   },
   {
     id: 2,
-    title: 'Standard Consultation',
+    title: 'Standard Consultation2',
     description: 'Ideal for in-depth discussions and detailed advice',
     price: 899,
     duration: '60 Minutes',
@@ -42,8 +42,13 @@ export function PackagesSection() {
       </div>
       
       <div className="packages-grid">
-        {PACKAGES.map((pkg) => (
-          <div key={pkg.id} className="package-card text-center">
+        {PACKAGES.map((pkg, index) => (
+          <div
+            key={pkg.id}
+            className={`package-card text-center ${
+              index < PACKAGES.length - 1 ? 'border-b pb-6 mb-6' : ''
+            }`}
+          >
             <h3 className="package-title text-center">{pkg.title}</h3>
             <p className="package-description text-center">{pkg.description}</p>
             <div className="package-price text-center">₹{pkg.price}</div>
