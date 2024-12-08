@@ -10,6 +10,14 @@
       "StackName": "amplify-chatconsultation-dev-3b5ae",
       "StackId": "arn:aws:cloudformation:ap-south-1:779846820457:stack/amplify-chatconsultation-dev-3b5ae/98fd8400-b57f-11ef-b592-02bfd55cf31f",
       "AmplifyAppId": "d285odeea4vdwe"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d285odeea4vdwe",
+          "type": "manual"
+        }
+      }
     }
   }
 }
